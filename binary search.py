@@ -1,19 +1,20 @@
-def binarySearch(num: int, arr: list, index: int):
-    place = len(arr)//2
-    midNum = arr[place]
+def search(nums: list[int], target: int) -> int:
+    # Input: nums = [-1,0,3,5,9,12], target = 2
+    l = 0
+    r = len(nums) - 1
+    while l <= r:
+        m = ((r+l) // 2)  # always center index or left index of center
+        if(nums[m] < target):
+            l = m + 1
+            continue
+        elif(nums[m] > target):
+            r = m - 1
+            continue
+        elif(nums[m] == target):
+            return m
+    return -1
 
-    if (midNum < arr[place]):
-        return binarySearch(num, arr[:place], index)
-    elif (midNum > arr[place]):
-        index += place
-        return binarySearch(num, arr[place+1:], index)
-    elif (midNum == arr[place]):
-        index = place
-        return (index)
 
-
-num = int(input())
-arr = list(map(int, input().split()))
-arr.sort()
-index = 0
-print(binarySearch(num, arr, index))
+nums = list(map(int, input().split(',')))
+target = int(input())
+print(search(nums, target))
