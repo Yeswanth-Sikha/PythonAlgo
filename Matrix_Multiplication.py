@@ -1,48 +1,31 @@
-from xmlrpc.client import boolean
-from Matrix_Input import matrixInput
+from Matrix_Input import matrixInput, mCompatibility
 
 
-def matrixMultiplication(m: int, n: int, A: list, B: list) -> list:
+def matrixMultiplication(m1: int, n1: int, m2: int, n2: int, A: list, B: list) -> list:
     result = []
-    for i in range(m):
+    for i in range(m1):
         row = []
-        for j in range(n):
+        for j in range(n2):
             cell = 0
-            for k in range(m):
+            for k in range(n1):
                 cell += (A[i][k] * B[k][j])
             row.append(cell)
         result.append(row)
     return result
 
 
-def validate(m1, n1, m2, n2) -> boolean:
-    if ((m1 == n2) or (n1 == m2)):
-        return True
-    else:
-        return False
-
-
 if __name__ == '__main__':
-    m, n = map(int, input("rows x columns: ").split('x'))
+    m1, n1 = map(int, input("For matrix1, rows x columns: ").split('x'))
+    m2, n2 = map(int, input("For matrix2, rows x columns: ").split('x'))
 
     print('Enter the values of matrix 1:')
-    A = matrixInput(m, n)
+    A = matrixInput(m1, n1)
 
     print('Enter the values of matrix 2:')
-    B = matrixInput(m, n)
-    print(f"matrix A: {A}")
-    print(f"matrix B: {B}")
+    B = matrixInput(m2, n2)
 
-    print(matrixMultiplication(m, n, A, B))
-
-'''
-2x2
-1
-2
-3
-4
-5
-6
-7
-8
-'''
+    m1, n1, m2, n2, A, B, compatible = mCompatibility(m1, n1, m2, n2, A, B)
+    if compatible:
+        print(matrixMultiplication(m1, n1, m2, n2, A, B))
+    else:
+        print(-1)
