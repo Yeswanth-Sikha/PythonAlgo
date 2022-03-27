@@ -9,13 +9,25 @@ def matrixInput(m, n):
     return matrix
 
 
+def mCompatibility(m1, n1, m2, n2, A, B):
+    if (n1 == m2):
+        return m1, n1, m2, n2, A, B, True
+    elif (m1 == n2):
+        return m2, n2, m1, n1, B, A, True
+    else:
+        return m1, n1, m2, n2, A, B, False
+
+
 if __name__ == '__main__':
-    m, n = map(int, input("rows x columns: ").split('x'))
+    m1, n1 = map(int, input("For matrix1: rows x columns: ").split('x'))
+    m2, n2 = map(int, input("For matrix2: rows x columns: ").split('x'))
     A, B = [], []
     print('Enter the values of matrix 1:')
-    A = matrixInput(m, n)
+    A = matrixInput(m1, n1)
     print('Enter the values of matrix 2:')
-    B = matrixInput(m, n)
+    B = matrixInput(m2, n2)
+
+    m1, n1, m2, n2, A, B = mCompatibility(m1, n1, m2, n2, A, B)
 
     print(f"matrix 1: {A}")
     print(f"matrix 2: {B}")
