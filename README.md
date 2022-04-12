@@ -6,3 +6,4 @@ This Repo contains few solved questions from leetcode in python language.
 [4. Binary Search](BinarySearch.py)  
 [5. Count K Difference](countKDifference.py)  
 [6. Jump Search](JumpSearch.py)  
+[7. Make Good](makeGood.py)
