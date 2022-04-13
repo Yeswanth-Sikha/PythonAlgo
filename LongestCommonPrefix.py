@@ -15,3 +15,8 @@ def longestCommonPrefix(strs: list[str]) -> str:
 if __name__ == "__main__":
     strs = ["flower", "flow", "flight"]
     print(longestCommonPrefix(strs))
+
+'''
+Runtime: 57 ms
+Memory Usage: 13.9 MB
+'''

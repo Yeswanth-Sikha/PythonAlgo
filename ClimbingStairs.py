@@ -15,3 +15,9 @@ def climbStairs(n: int) -> int:
 if __name__ == '__main__':
     n = int(input())
     print(climbStairs(n))
+
+
+'''
+Runtime: 32 ms
+Memory Usage: 13.9 MB
+'''

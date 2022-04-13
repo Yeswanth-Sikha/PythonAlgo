@@ -15,6 +15,11 @@ def search(nums: list[int], target: int) -> int:
     return -1
 
 
-nums = list(map(int, input().split(',')))
-target = int(input())
+nums = [-1, 0, 3, 5, 9, 12]
+target = 2
 print(search(nums, target))
+
+'''
+Runtime: 308 ms
+Memory Usage: 15.6 MB
+'''

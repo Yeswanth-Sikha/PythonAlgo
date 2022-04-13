@@ -26,3 +26,8 @@ def makeGood(s: str) -> str:
 if __name__ == '__main__':
     s = input()
     print(makeGood(s))
+
+'''
+Runtime: 80 ms
+Memory Usage: 13.8 MB
+'''

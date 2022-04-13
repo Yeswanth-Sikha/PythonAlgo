@@ -12,3 +12,7 @@ if __name__ == '__main__':
     nums = list(map(int, input().split(',')))
     k = int(input())
     print(countKDifference(nums, k))
+'''
+Runtime: 180ms
+Memory Usage: 13.9 MB
+'''
