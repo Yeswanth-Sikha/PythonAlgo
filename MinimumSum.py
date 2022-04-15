@@ -1,6 +1,3 @@
-<< << << < HEAD
-
-
 def minimumSum(num: int) -> int:
     numList = list(map(int, list(str(num))))
     numList.sort()
