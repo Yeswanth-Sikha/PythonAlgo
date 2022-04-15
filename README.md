@@ -1,5 +1,5 @@
 # PythonAlgo
-This Repo contains few solved questions from leetcode in python language.  
+This Repo contains few solved questions(easy) from leetcode in python language.  
 [1. Matrix Input](MatrixInput.py)  
 [2. Matrix Multiplication](MatrixMultiplication.py)  
 [3. Search 2D Matrix](Search_2D_Matrix.py)  
@@ -12,3 +12,4 @@ This Repo contains few solved questions from leetcode in python language.
 [10. Two Sum](TwoSum.py)  
 [11. Climbing Stairs](ClimbingStairs.py)  
 [12. Shuffle the Array](Shuffle.py)  
+[13. Minimum Sum of Four Digit Number After Splitting Digits](MinimumSum.py)  
